@@ -19,14 +19,15 @@ double calculateAverage(double total, int count) {
 }
 
 // Determines the letter grade from the average score.
+// Peer Review: Swapped number grades for grade constants. 
 char determineLetterGrade(double average) {
-    if (average >= 90) {
+    if (average >= A_MINIMUM) {
         return 'A';
-    } else if (average >= 80) {
+    } else if (average >= B_MINIMUM) {
         return 'B';
-    } else if (average >= 70) {
+    } else if (average >= C_MINIMUM) {
         return 'C';
-    } else if (average >= 60) {
+    } else if (average >= D_MINIMUM) {
         return 'D';
     } else {
         return 'F';
@@ -35,12 +36,13 @@ char determineLetterGrade(double average) {
 
 // Returns true if the student has a passing average.
 bool isPassing(double average) {
-    return average >= 70;
+    return average >= PASSING_MINIMUM;
 }
 
 // Checks whether the score is between 0 and 100, inclusive.
+//Peer Review: Changed numbers to match double data type.
 bool isValidScore(double score) {
-    return score >= 0 && score <= 100;
+    return score >= 0.0 && score <= 100.0;
 }
 
 
